@@ -1,0 +1,5 @@
+ID, FIRSTNAME, LASTNAME, AGE, SALARY, TITLE
+1, "venkatesh", "kumar", 21, 30000, "reporter"
+2, "kiran", "kannan", 45, 9000, "chairman"
+3, "pradeep", "mishra", 35, 15000, "manager"
+4, "suman", "raj", 35, 12000, "manager"

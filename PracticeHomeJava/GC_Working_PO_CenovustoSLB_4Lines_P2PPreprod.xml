@@ -1,0 +1,454 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/1999/XMLSchema">
+	<soapenv:Header xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+		<DeliveryInformation xmlns:ocp="http://www.digitaloilfield.com/ocp">
+			<DocumentType>PURCHASEORDER</DocumentType>
+			<DateTime>2011-02-05 23:12:25.-0600</DateTime>
+			<TrackingIdentifier indicator="messageId">F389FFED-C9AC-432C-BD3C-7AA9F4322</TrackingIdentifier>
+			<ReceiverIdentifier identifierType="DUNSNumber">200103377</ReceiverIdentifier>
+			<SenderIdentifier identifierType="DUNSNumber">255379695</SenderIdentifier>
+			<NumberOfAttachments>6</NumberOfAttachments>
+		</DeliveryInformation>
+	</soapenv:Header>
+	<soapenv:Body>
+
+<!-- PO Information -->
+		<pidx:OrderChange pidx:transactionPurposeIndicator="Original" pidx:version="1.2" xmlns="http://www.api.org/pidXML" xmlns:pidx="http://www.api.org/pidXML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.api.org/pidXML W:\dev\trunk\integration\schemas\pidx\OrderChange_1-2.xsd">
+			<pidx:OrderChangeProperties>
+				<pidx:OrderChangeNumber>1</pidx:OrderChangeNumber>
+				<pidx:OrderChangeDate>2014-06-02</pidx:OrderChangeDate>				
+				<pidx:PurchaseOrderInformation>
+					<pidx:PurchaseOrderNumber>GC_PP_DEMPO1</pidx:PurchaseOrderNumber>
+					<pidx:PurchaseOrderIssuedDate>2014-06-02</pidx:PurchaseOrderIssuedDate>
+					<pidx:PurchaseOrderTypeCode>SupplyOrServiceOrder</pidx:PurchaseOrderTypeCode>
+				</pidx:PurchaseOrderInformation>
+<!-- PO Buyer Information -->
+<!-- Bill TO Address -->
+				<pidx:PartnerInformation partnerRoleIndicator="BillTo">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">255379695</pidx:PartnerIdentifier>
+					<pidx:AddressInformation>
+						<pidx:AddressLine>123 Sparks Street Test2</pidx:AddressLine>
+						<pidx:CityName>Calary</pidx:CityName>
+						<pidx:StateProvince>AB</pidx:StateProvince>
+						<pidx:PostalCode>T2H 3P2</pidx:PostalCode>
+						<pidx:PostalCountry>
+							<pidx:CountryCode>CA</pidx:CountryCode>
+						</pidx:PostalCountry>
+					</pidx:AddressInformation>
+					<pidx:ContactInformation contactInformationIndicator="BuyerDepartment">
+						<pidx:Telephone telephoneIndicator="Voice">
+							<pidx:PhoneNumber>(403)111-1111</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:Telephone telephoneIndicator="Fax">
+							<pidx:PhoneNumber>(403)111-1112</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+					</pidx:ContactInformation>
+				</pidx:PartnerInformation>
+<!-- Ship TO Address -->
+				<pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">3369</pidx:PartnerIdentifier>
+					<pidx:AddressInformation>
+						<pidx:AddressLine>ATTN: Receiver</pidx:AddressLine>
+						<pidx:AddressLine>333 Elm Street</pidx:AddressLine>
+						<pidx:CityName>Vanouver</pidx:CityName>
+						<pidx:StateProvince>BC</pidx:StateProvince>
+						<pidx:PostalCode>V0B 2L0</pidx:PostalCode>
+						<pidx:PostalCountry>
+							<pidx:CountryCode>CA</pidx:CountryCode>
+						</pidx:PostalCountry>
+					</pidx:AddressInformation>
+					<pidx:ContactInformation contactInformationIndicator="BuyerDepartment">
+						<pidx:Telephone telephoneIndicator="Voice">
+							<pidx:PhoneNumber>(250)222-2222</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:Telephone telephoneIndicator="Fax">
+							<pidx:PhoneNumber>(250)222-2221</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+					</pidx:ContactInformation>
+<!-- Final Recipient TO Address -->
+				</pidx:PartnerInformation>
+				<pidx:PartnerInformation partnerRoleIndicator="FinalRecipient">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">9562</pidx:PartnerIdentifier>
+					<pidx:AddressInformation>
+						<pidx:AddressLine>56 Sycamore Ave.</pidx:AddressLine>
+						<pidx:CityName>Victoria</pidx:CityName>
+						<pidx:StateProvince>BC</pidx:StateProvince>
+						<pidx:PostalCode>V0N 0N0</pidx:PostalCode>
+						<pidx:PostalCountry>
+							<pidx:CountryCode>CA</pidx:CountryCode>
+						</pidx:PostalCountry>
+					</pidx:AddressInformation>
+					<pidx:ContactInformation contactInformationIndicator="PurchasingAgent">
+						<pidx:ContactName>Steve Smith</pidx:ContactName>
+						<pidx:Telephone telephoneIndicator="Voice">
+							<pidx:PhoneNumber>(403)777-7777</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:Telephone telephoneIndicator="Fax">
+							<pidx:PhoneNumber>(403)777-7778</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+					</pidx:ContactInformation>
+				</pidx:PartnerInformation>
+<!-- NonBilling Inquiries Address -->
+				<pidx:PartnerInformation partnerRoleIndicator="Other" definitionOfOther="NonBillingInquiries">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">9999</pidx:PartnerIdentifier>
+					<pidx:AddressInformation>
+						<pidx:AddressLine>99 Fig Avenue</pidx:AddressLine>
+						<pidx:CityName>Sooke</pidx:CityName>
+						<pidx:StateProvince>BC</pidx:StateProvince>
+						<pidx:PostalCode>V0N 0N1</pidx:PostalCode>
+						<pidx:PostalCountry>
+							<pidx:CountryCode>CA</pidx:CountryCode>
+						</pidx:PostalCountry>
+					</pidx:AddressInformation>
+					<pidx:ContactInformation  contactInformationIndicator="PurchasingAgent">
+						<pidx:ContactName>Tara White</pidx:ContactName>
+						<pidx:Telephone telephoneIndicator="Voice">
+							<pidx:PhoneNumber>(403)444-4444</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:Telephone telephoneIndicator="Fax">
+							<pidx:PhoneNumber>(403)444-4445</pidx:PhoneNumber>
+						</pidx:Telephone>
+						<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+					</pidx:ContactInformation>
+				</pidx:PartnerInformation>
+				<pidx:PartnerInformation partnerRoleIndicator="Seller">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">1032773</pidx:PartnerIdentifier>
+				</pidx:PartnerInformation>
+				<pidx:PartnerInformation partnerRoleIndicator="SoldTo">
+					<pidx:PartnerIdentifier partnerIdentifierIndicator="DUNSNumber">255379695</pidx:PartnerIdentifier>
+				</pidx:PartnerInformation>
+<!-- SequenceNumber -->
+				<pidx:SequenceNumber>1</pidx:SequenceNumber>
+				<pidx:PrimaryCurrency>
+					<pidx:CurrencyCode>CAD</pidx:CurrencyCode>
+				</pidx:PrimaryCurrency>
+				<pidx:LanguageCode>EN</pidx:LanguageCode>
+				<pidx:TransportInformation>
+					<pidx:ShipmentMethodOfPayment>Collect</pidx:ShipmentMethodOfPayment>
+					<pidx:ShipmentTermsCode>DDD</pidx:ShipmentTermsCode>
+				</pidx:TransportInformation>
+				<pidx:SpecialInstructions instructionIndicator="Other" definitionOfOther="DocumentState">Submit</pidx:SpecialInstructions>
+				<!--pidx:SpecialInstructions instructionIndicator="CarrierInstructions">Will Call</pidx:SpecialInstructions-->
+<!-- Attachments -->
+				<pidx:Attachment>
+					<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+					<pidx:AttachmentTitle>AttachTitle1</pidx:AttachmentTitle>
+					<pidx:AttachmentDescription>AttachDescription1</pidx:AttachmentDescription>
+					<pidx:AttachmentLocation>cid:testsHeader1.txt</pidx:AttachmentLocation>
+				</pidx:Attachment>
+				<pidx:Attachment>
+					<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+					<pidx:AttachmentTitle>AttachTitle2</pidx:AttachmentTitle>
+					<pidx:AttachmentDescription>AttachDescription2</pidx:AttachmentDescription>
+					<pidx:AttachmentLocation>cid:testsLine1.txt</pidx:AttachmentLocation>
+				</pidx:Attachment>
+				<pidx:Attachment>
+					<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+					<pidx:AttachmentTitle>AttachTitle3</pidx:AttachmentTitle>
+					<pidx:AttachmentDescription>AttachDescription3</pidx:AttachmentDescription>
+					<pidx:AttachmentLocation>cid:testsHeader2.gif</pidx:AttachmentLocation>
+				</pidx:Attachment>
+				<pidx:Attachment>
+					<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+					<pidx:AttachmentTitle>AttachTitle4</pidx:AttachmentTitle>
+					<pidx:AttachmentDescription>AttachDescription4</pidx:AttachmentDescription>
+					<pidx:AttachmentLocation>cid:testsLine2.txt</pidx:AttachmentLocation>
+				</pidx:Attachment>				
+				<pidx:Comment>PURCHASE ORDER CHANGE Gopal</pidx:Comment>
+			</pidx:OrderChangeProperties>
+<!-- PO Line Item Details -->
+			<pidx:OrderChangeDetails>
+<!-- PO Line Item 1 -->			
+				<pidx:OrderChangeLineItem>
+					<pidx:LineItemNumber>1</pidx:LineItemNumber>
+					<pidx:ItemDetailChangeCode>ModifyOther</pidx:ItemDetailChangeCode>
+					<pidx:LineItemInformation>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByBuyer">BC-001</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedBySeller">6LGR7K</pidx:LineItemIdentifier> <!--Supplier Code-->
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByManufacturer">MC-001</pidx:LineItemIdentifier> <!--MFTR Code-->
+						<pidx:LineItemDescription>0 - 7000 KPA (0 - 1015 PSI) - 6LGR7K</pidx:LineItemDescription> <!--Buyer Description-->
+					</pidx:LineItemInformation>
+					<pidx:OrderQuantity>
+						<pidx:Quantity>18.00</pidx:Quantity> <!--Lineitem # quantity-->
+						<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode> <!--units-->
+					</pidx:OrderQuantity>
+					<pidx:PurchaseOrderLineItemNumber>1</pidx:PurchaseOrderLineItemNumber> <!--Item-->
+					<pidx:PartnerInformation partnerRoleIndicator="ShipToParty"> <!-- Ship To details in the line item #1-->
+						<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">3369</pidx:PartnerIdentifier>
+						<pidx:AddressInformation>
+							<pidx:AddressLine>ATTN: Line 1 Ship To</pidx:AddressLine>
+							<pidx:AddressLine>333-1 Elm Street</pidx:AddressLine>
+							<pidx:CityName>Vanouver</pidx:CityName>
+							<pidx:StateProvince>BC</pidx:StateProvince>
+							<pidx:PostalCode>V0B 2L0</pidx:PostalCode>
+							<pidx:PostalCountry>
+								<pidx:CountryCode>CA</pidx:CountryCode>
+							</pidx:PostalCountry>
+						</pidx:AddressInformation>
+						<pidx:ContactInformation contactInformationIndicator="BuyerDepartment"> <!-- Contact Information-->
+							<pidx:Telephone telephoneIndicator="Voice">
+								<pidx:PhoneNumber>(250)222-4444</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:Telephone telephoneIndicator="Fax">
+								<pidx:PhoneNumber>(250)222-5555</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+						</pidx:ContactInformation>
+					</pidx:PartnerInformation>
+					<pidx:JobLocationInformation>
+						<pidx:WellInformation>
+						  <pidx:WellIdentifier>EncWell0222</pidx:WellIdentifier>
+						</pidx:WellInformation>
+					</pidx:JobLocationInformation>
+					<pidx:Pricing>
+						<pidx:UnitPrice>
+							<pidx:MonetaryAmount>4000.00</pidx:MonetaryAmount> <!-- Rate in the first line item-->
+							<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+						</pidx:UnitPrice>
+					</pidx:Pricing>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodStart">2011-02-05T00:00:00-05:00</pidx:ServiceDateTime>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodEnd">2011-12-05T00:00:00.0-06:00</pidx:ServiceDateTime>
+					<pidx:ReferenceInformation referenceInformationIndicator="AFENumber">
+						<pidx:ReferenceNumber>0212548</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="CostCenter">
+						<pidx:ReferenceNumber>1108</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="JobNumber">
+						<pidx:ReferenceNumber>WO1</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="OperatorGeneralLedgerCode">
+						<pidx:ReferenceNumber>8950.010</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:Attachment>
+						<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+						<pidx:AttachmentTitle>AttachTitleLine1A1</pidx:AttachmentTitle>
+						<pidx:AttachmentDescription>AttachDescriptionLine1A1</pidx:AttachmentDescription>
+						<pidx:AttachmentLocation>cid:RockyLine1A1.txt</pidx:AttachmentLocation>
+					</pidx:Attachment>  					
+					<pidx:Comment>PO Line Number:1</pidx:Comment>
+				</pidx:OrderChangeLineItem>
+<!-- PO Line Item 2 -->
+				<pidx:OrderChangeLineItem>
+					<pidx:LineItemNumber>2</pidx:LineItemNumber>
+					<pidx:ItemDetailChangeCode>ModifyOther</pidx:ItemDetailChangeCode>
+					<pidx:LineItemInformation>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByBuyer">BC-002</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedBySeller">6C502060</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByManufacturer">MC-002</pidx:LineItemIdentifier>
+						<pidx:LineItemDescription>0 to 20,000 psi Baker Hand Pump - 6C502060</pidx:LineItemDescription>
+					</pidx:LineItemInformation>
+					<pidx:OrderQuantity>
+						<pidx:Quantity>8.00</pidx:Quantity>
+						<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+					</pidx:OrderQuantity>
+					<pidx:PurchaseOrderLineItemNumber>2</pidx:PurchaseOrderLineItemNumber>
+					<pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+						<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">3369</pidx:PartnerIdentifier>
+						<pidx:AddressInformation>
+							<pidx:AddressLine>ATTN: Line 2 Ship To</pidx:AddressLine>
+							<pidx:AddressLine>333-2 Elm Street</pidx:AddressLine>
+							<pidx:CityName>Vanouver</pidx:CityName>
+							<pidx:StateProvince>BC</pidx:StateProvince>
+							<pidx:PostalCode>V0B 2L0</pidx:PostalCode>
+							<pidx:PostalCountry>
+								<pidx:CountryCode>CA</pidx:CountryCode>
+							</pidx:PostalCountry>
+						</pidx:AddressInformation>
+						<pidx:ContactInformation contactInformationIndicator="BuyerDepartment">
+							<pidx:Telephone telephoneIndicator="Voice">
+								<pidx:PhoneNumber>(250)222-4444</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:Telephone telephoneIndicator="Fax">
+								<pidx:PhoneNumber>(250)222-5555</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+						</pidx:ContactInformation>
+					</pidx:PartnerInformation>
+					<pidx:JobLocationInformation>
+						<pidx:WellInformation>
+						  <pidx:WellIdentifier>EncWell0222</pidx:WellIdentifier>
+						</pidx:WellInformation>
+					</pidx:JobLocationInformation>
+					<pidx:Pricing>
+						<pidx:UnitPrice>
+							<pidx:MonetaryAmount>555.00</pidx:MonetaryAmount>
+							<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+						</pidx:UnitPrice>
+					</pidx:Pricing>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodStart">2011-02-05T00:00:00-05:00</pidx:ServiceDateTime>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodEnd">2011-12-05T00:00:00.0-06:00</pidx:ServiceDateTime>
+				<pidx:ReferenceInformation referenceInformationIndicator="AFENumber">
+						<pidx:ReferenceNumber>0212548</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="CostCenter">
+						<pidx:ReferenceNumber>1108</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="JobNumber">
+						<pidx:ReferenceNumber>WO1</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="OperatorGeneralLedgerCode">
+						<pidx:ReferenceNumber>8950.010</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:Attachment>
+						<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+						<pidx:AttachmentTitle>AttachTitleLine2A1</pidx:AttachmentTitle>
+						<pidx:AttachmentDescription>AttachDescriptionLine2A1</pidx:AttachmentDescription>
+						<pidx:AttachmentLocation>cid:RockyLine2A1.txt</pidx:AttachmentLocation>
+					</pidx:Attachment>  					
+					<pidx:Comment>PO Line Number:2</pidx:Comment>
+				</pidx:OrderChangeLineItem>
+<!-- PO Line Item 3 -->
+				<pidx:OrderChangeLineItem>
+					<pidx:LineItemNumber>3</pidx:LineItemNumber>
+					<pidx:ItemDetailChangeCode>ModifyOther</pidx:ItemDetailChangeCode>
+					<pidx:LineItemInformation>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByBuyer">BC-003</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedBySeller">6XTCPPUP</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByManufacturer">MC-003</pidx:LineItemIdentifier>
+						<pidx:LineItemDescription>Pup Joints - 6XTCPPUP</pidx:LineItemDescription>
+					</pidx:LineItemInformation>
+					<pidx:OrderQuantity>
+						<pidx:Quantity>8.00</pidx:Quantity>
+						<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+					</pidx:OrderQuantity>
+					<pidx:PurchaseOrderLineItemNumber>3</pidx:PurchaseOrderLineItemNumber>
+					<pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+						<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">3369</pidx:PartnerIdentifier>
+						<pidx:AddressInformation>
+							<pidx:AddressLine>ATTN: Line 3 Ship To</pidx:AddressLine>
+							<pidx:AddressLine>333-2 Elm Street</pidx:AddressLine>
+							<pidx:CityName>Vanouver</pidx:CityName>
+							<pidx:StateProvince>BC</pidx:StateProvince>
+							<pidx:PostalCode>V0B 2L0</pidx:PostalCode>
+							<pidx:PostalCountry>
+								<pidx:CountryCode>CA</pidx:CountryCode>
+							</pidx:PostalCountry>
+						</pidx:AddressInformation>
+						<pidx:ContactInformation contactInformationIndicator="BuyerDepartment">
+							<pidx:Telephone telephoneIndicator="Voice">
+								<pidx:PhoneNumber>(250)222-4444</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:Telephone telephoneIndicator="Fax">
+								<pidx:PhoneNumber>(250)222-5555</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+						</pidx:ContactInformation>
+					</pidx:PartnerInformation>
+					<pidx:JobLocationInformation>
+						<pidx:WellInformation>
+						  <pidx:WellIdentifier>EncWell0222</pidx:WellIdentifier>
+						</pidx:WellInformation>
+					</pidx:JobLocationInformation>
+					<pidx:Pricing>
+						<pidx:UnitPrice>
+							<pidx:MonetaryAmount>700.00</pidx:MonetaryAmount>
+							<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+						</pidx:UnitPrice>
+					</pidx:Pricing>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodStart">2011-02-05T00:00:00-05:00</pidx:ServiceDateTime>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodEnd">2011-12-05T00:00:00.0-06:00</pidx:ServiceDateTime>
+					<!--pidx:SpecialInstructions instructionIndicator="Tolerances">YES</pidx:SpecialInstructions-->
+				<pidx:ReferenceInformation referenceInformationIndicator="AFENumber">
+						<pidx:ReferenceNumber>0212548</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="CostCenter">
+						<pidx:ReferenceNumber>1108</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="JobNumber">
+						<pidx:ReferenceNumber>WO1</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="OperatorGeneralLedgerCode">
+						<pidx:ReferenceNumber>8950.010</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<!--
+					<pidx:Attachment>
+						<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+						<pidx:AttachmentTitle>AttachTitleLine2A1</pidx:AttachmentTitle>
+						<pidx:AttachmentDescription>AttachDescriptionLine2A1</pidx:AttachmentDescription>
+						<pidx:AttachmentLocation>cid:RockyLine2A1.txt</pidx:AttachmentLocation>
+					</pidx:Attachment>  					
+					-->
+					<pidx:Comment>PO Line Number:3</pidx:Comment>
+				</pidx:OrderChangeLineItem>
+<!-- PO Line Item 4 -->
+				<pidx:OrderChangeLineItem>
+					<pidx:LineItemNumber>4</pidx:LineItemNumber>
+					<pidx:ItemDetailChangeCode>ModifyOther</pidx:ItemDetailChangeCode>
+					<pidx:LineItemInformation>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByBuyer">BC-004</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedBySeller">6XTPARTY</pidx:LineItemIdentifier>
+						<pidx:LineItemIdentifier identifierIndicator="AssignedByManufacturer">MC-004</pidx:LineItemIdentifier>
+						<pidx:LineItemDescription>Impact Selector Inv 2290</pidx:LineItemDescription>
+					</pidx:LineItemInformation>
+					<pidx:OrderQuantity>
+						<pidx:Quantity>8.00</pidx:Quantity>
+						<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+					</pidx:OrderQuantity>
+					<pidx:PurchaseOrderLineItemNumber>4</pidx:PurchaseOrderLineItemNumber>
+					<pidx:PartnerInformation partnerRoleIndicator="ShipToParty">
+						<pidx:PartnerIdentifier partnerIdentifierIndicator="AssignedByBuyer">3369</pidx:PartnerIdentifier>
+						<pidx:AddressInformation>
+							<pidx:AddressLine>ATTN: Line 4 Ship To</pidx:AddressLine>
+							<pidx:AddressLine>333-2 Elm Street</pidx:AddressLine>
+							<pidx:CityName>Vanouver</pidx:CityName>
+							<pidx:StateProvince>BC</pidx:StateProvince>
+							<pidx:PostalCode>V0B 2L0</pidx:PostalCode>
+							<pidx:PostalCountry>
+								<pidx:CountryCode>CA</pidx:CountryCode>
+							</pidx:PostalCountry>
+						</pidx:AddressInformation>
+						<pidx:ContactInformation contactInformationIndicator="BuyerDepartment">
+							<pidx:Telephone telephoneIndicator="Voice">
+								<pidx:PhoneNumber>(250)222-4444</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:Telephone telephoneIndicator="Fax">
+								<pidx:PhoneNumber>(250)222-5555</pidx:PhoneNumber>
+							</pidx:Telephone>
+							<pidx:EmailAddress>gopal.chavali@adp.com</pidx:EmailAddress>
+						</pidx:ContactInformation>
+					</pidx:PartnerInformation>
+					<pidx:JobLocationInformation>
+						<pidx:WellInformation>
+						  <pidx:WellIdentifier>EncWell0222</pidx:WellIdentifier>
+						</pidx:WellInformation>
+					</pidx:JobLocationInformation>
+					<pidx:Pricing>
+						<pidx:UnitPrice>
+							<pidx:MonetaryAmount>900.00</pidx:MonetaryAmount>
+							<pidx:UnitOfMeasureCode>EA</pidx:UnitOfMeasureCode>
+						</pidx:UnitPrice>
+					</pidx:Pricing>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodStart">2011-02-05T00:00:00-05:00</pidx:ServiceDateTime>
+					<pidx:ServiceDateTime dateTypeIndicator="ServicePeriodEnd">2011-12-05T00:00:00.0-06:00</pidx:ServiceDateTime>
+				<pidx:ReferenceInformation referenceInformationIndicator="AFENumber">
+						<pidx:ReferenceNumber>0212548</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="CostCenter">
+						<pidx:ReferenceNumber>1108</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="JobNumber">
+						<pidx:ReferenceNumber>WO1</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<pidx:ReferenceInformation referenceInformationIndicator="OperatorGeneralLedgerCode">
+						<pidx:ReferenceNumber>8950.010</pidx:ReferenceNumber>
+					</pidx:ReferenceInformation>
+					<!--
+					<pidx:Attachment>
+						<pidx:AttachmentPurposeCode>Other</pidx:AttachmentPurposeCode>
+						<pidx:AttachmentTitle>AttachTitleLine2A1</pidx:AttachmentTitle>
+						<pidx:AttachmentDescription>AttachDescriptionLine2A1</pidx:AttachmentDescription>
+						<pidx:AttachmentLocation>cid:RockyLine2A1.txt</pidx:AttachmentLocation>
+					</pidx:Attachment>  					
+					-->
+					<pidx:Comment>PO Line Number:4</pidx:Comment>
+				</pidx:OrderChangeLineItem>
+			</pidx:OrderChangeDetails>
+			<pidx:OrderChangeSummary>
+				<pidx:TotalLineItems>4</pidx:TotalLineItems>
+			</pidx:OrderChangeSummary>
+		</pidx:OrderChange>
+	</soapenv:Body>
+</soapenv:Envelope>
