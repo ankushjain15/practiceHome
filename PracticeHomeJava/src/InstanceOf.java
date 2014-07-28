@@ -71,12 +71,21 @@ class ClassC extends ClassASamePackage {
 		}
 }
 public class InstanceOf {
+	protected ArrayList<String> arrList;
 	
 	private InstanceOf(){
 		System.out.println("creating instanceOf object");
 	}
+	
+	private void assignOtherPackageProtectedMember() {
+		ClassA obj = new ClassA();
+		arrList = obj.assignThisProtectedToOutsideVar();
+		System.out.println(arrList);
+		
+	}
 	public static void main(String[] args) {
 		InstanceOf ob = new InstanceOf();
+		ob.assignOtherPackageProtectedMember();
 		ClassB bObj = new ClassB(3);
 		System.out.println(bObj.a);
 		bObj.protectedFun();
