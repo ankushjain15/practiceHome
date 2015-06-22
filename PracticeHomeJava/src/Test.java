@@ -2,6 +2,7 @@ import java.math.BigInteger;
 
 
 class ankush{
+	
 	public void func(int a)
 	{
 		System.out.println("Integer");
