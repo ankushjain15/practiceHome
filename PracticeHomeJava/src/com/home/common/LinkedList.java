@@ -1,13 +1,13 @@
 package com.home.common;
 
-public class LinkedList {
-	protected UniDirectionalNode head;
+public class LinkedList<T> {
+	protected Node head;
 	
 	public LinkedList() {
 		this.head = null;
 	}
 	
-	public void addNode(int data) {
+	public void addNode(T data) {
 		Node temp = head;
 		if (head == null) {
 			head = new UniDirectionalNode(data);
@@ -18,6 +18,20 @@ public class LinkedList {
 		}
 		temp.setRight(new UniDirectionalNode(data));
 		
+	}
+	
+	public void remove(T data) {
+		Node temp = head;
+		if(data == temp.getData()) {
+			head = head.getRight();
+		}
+		while (temp.getRight() != null) {
+			if (temp.getRight().getData() == data) {
+				temp.setRight(temp.getRight().getRight());
+				return;
+			}
+			temp = temp.getRight();
+		}
 	}
 	
 	public void printLL() {

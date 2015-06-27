@@ -1,14 +1,14 @@
 package com.home.common;
 
-public class UniDirectionalNode implements Node {
-	protected int data;
+public class UniDirectionalNode<T> implements Node<T> {
+	protected T data;
 	protected Node right;
 	
 	public UniDirectionalNode() {
 		this.right = null;
 	}
 	
-	public UniDirectionalNode(int data) {
+	public UniDirectionalNode(T data) {
 		this.data = data;
 	}
 	
@@ -34,8 +34,8 @@ public class UniDirectionalNode implements Node {
 	}
 
 	@Override
-	public int getData() {
-		return this.data;
+	public T getData() {
+		return this.data;  
 	}
 	
 	

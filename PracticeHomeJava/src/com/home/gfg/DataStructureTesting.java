@@ -4,10 +4,12 @@ import com.home.common.LinkedList;
 
 public class DataStructureTesting {
 	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
-		list.addNode(2);
-		list.addNode(4);
-		list.addNode(1);
+		LinkedList<String> list = new LinkedList<String>();
+		list.addNode("ankush");
+		list.addNode("jain");
+		list.addNode("ivy");
+		list.printLL();
+		list.remove("ivy");
 		list.printLL();
 	}
 }

@@ -1,6 +1,6 @@
 package com.home.common;
 
-public class BiDirectionalNode extends UniDirectionalNode implements Node {
+public class BiDirectionalNode<T> extends UniDirectionalNode<T> implements Node<T> {
 	protected Node left;
 	
 	public BiDirectionalNode() {
