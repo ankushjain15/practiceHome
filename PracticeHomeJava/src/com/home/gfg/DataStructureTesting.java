@@ -11,5 +11,7 @@ public class DataStructureTesting {
 		list.printLL();
 		list.remove("ivy");
 		list.printLL();
+		list.reverse();
+		list.printLL();
 	}
 }

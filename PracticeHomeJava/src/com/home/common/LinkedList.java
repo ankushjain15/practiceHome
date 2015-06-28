@@ -34,12 +34,24 @@ public class LinkedList<T> {
 		}
 	}
 	
+	public void reverse() {
+		Node<T> prev = null;
+		Node<T> next = head;
+		while (next != null) {
+			head = next;
+			next = head.getRight();
+			head.setRight(prev);
+			prev = head;
+		}
+	}
+	
 	public void printLL() {
 		Node temp = head;
 		while (temp != null) {
-			System.out.println(temp.getData());
+			System.out.print(temp.getData() + " ");
 			temp = temp.getRight();
 		}
+		System.out.println("");
 	}
 }
 
