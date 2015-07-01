@@ -2,7 +2,7 @@ package com.home.common;
 
 public class UniDirectionalNode<T> implements Node<T> {
 	protected T data;
-	protected Node right;
+	protected Node<T> right;
 	
 	public UniDirectionalNode() {
 		this.right = null;
@@ -13,22 +13,22 @@ public class UniDirectionalNode<T> implements Node<T> {
 	}
 	
 	@Override
-	public Node getLeft() throws IllegalAccessException {
+	public Node<T> getLeft() throws IllegalAccessException {
 		throw new IllegalAccessException("left node not defined for unidirectional node");
 	}
 	@Override
-	public Node getRight() {
+	public Node<T> getRight() {
 		return this.right;
 	}
 
 	@Override
-	public void setRight(Node node) {
+	public void setRight(Node<T> node) {
 		this.right = node;
 		
 	}
 
 	@Override
-	public void setLeft(Node node) throws IllegalAccessException {
+	public void setLeft(Node<T> node) throws IllegalAccessException {
 		throw new IllegalAccessException("left node not defined for unidirectional node");
 		
 	}
