@@ -35,7 +35,27 @@ public class BinaryTree<T> {
 		return this.height;
 	}
 	
-	public void heightHelper(Node<T> node, int curHeight) throws IllegalAccessException {
+	public void printTree() throws IllegalAccessException {
+		printTreeHelper(this.root, 0);
+	}
+	
+	private void printTreeHelper(Node<T> node, int depth) throws IllegalAccessException {
+		if (node == null) {
+			for (int i=0;i<depth;++i) {
+				System.out.print("		");
+			}
+			System.out.println("NULL");
+			return;
+		}
+		printTreeHelper(node.getRight(), depth+1);
+		for (int j=0;j<depth;++j) {
+			System.out.print("		");
+		}
+		System.out.println(node.getData());
+		printTreeHelper(node.getLeft(), depth+1);
+	}
+	
+	private void heightHelper(Node<T> node, int curHeight) throws IllegalAccessException {
 		if (node == null) {
 			return;
 		}
