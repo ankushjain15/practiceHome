@@ -16,8 +16,8 @@ public class DataStructureTesting {
 		list.reverse();
 		list.printLL();
 		
-		BinaryTree<Integer> tree = new BinaryTree<Integer>();
-//		BST<Integer> tree = new BST<Integer>();
+//		BinaryTree<Integer> tree = new BinaryTree<Integer>();
+		BST<Integer> tree = new BST<Integer>();
 		tree.addNode(2);
 		tree.addNode(8);
 		tree.addNode(9);
