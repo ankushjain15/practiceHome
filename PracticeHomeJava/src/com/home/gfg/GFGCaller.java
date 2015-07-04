@@ -4,7 +4,10 @@ public class GFGCaller {
 
 	public static void main(String[] args) {
 		//majority element
-		int[] arr = {3,2,3,4,5,3,3,2,3,3,6,7,3,3,1,3};
-		MajorityElementUnsortedArr.findMajorityElement(arr);
+		int[] arrMajorityElem = {3,2,3,4,5,3,3,2,3,3,6,7,3,3,1,3};
+		ArrMajorityElementUnsorted.findMajorityElement(arrMajorityElem);
+		
+		int[] arrMaxContSum = {-9,8,4,-5,-7,6,4,-1,-3};
+		ArrMaxContiguousSum.getMaxContiguousSum(arrMaxContSum);
 	}
 }

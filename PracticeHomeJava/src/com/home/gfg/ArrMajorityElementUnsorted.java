@@ -1,6 +1,6 @@
 package com.home.gfg;
 
-public class MajorityElementUnsortedArr {
+public class ArrMajorityElementUnsorted {
 	
 	public static void findMajorityElement(int[] arr) {
 		int cand = findCandidate(arr);
