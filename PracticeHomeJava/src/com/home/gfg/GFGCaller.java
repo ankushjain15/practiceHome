@@ -9,5 +9,8 @@ public class GFGCaller {
 		
 		int[] arrMaxContSum = {-9,8,4,-5,-7,6,4,-1,-3};
 		ArrMaxContiguousSum.getMaxContiguousSum(arrMaxContSum);
+		
+		int[] arrMaxSumNoElemAdj = {5,-5,-10,-40,50,35};
+		ArrMaxSumNoTwoElemAdjacent.findMaxSumNoTwoElemAdjacent(arrMaxSumNoElemAdj);
 	}
 }
