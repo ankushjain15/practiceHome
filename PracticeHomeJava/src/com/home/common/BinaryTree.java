@@ -31,12 +31,22 @@ public class BinaryTree<T> {
 	}
 	
 	public Integer getHeight() throws IllegalAccessException {
-		heightHelper(this.root, 1);
-		return this.height;
+		return heightHelper(this.root);
 	}
 	
 	public void printTree() throws IllegalAccessException {
 		printTreeHelper(this.root, 0);
+	}
+	
+	public int getSize() throws IllegalAccessException {
+		return getSizeHelper(this.root);
+	}
+	
+	private int getSizeHelper(Node<T> node) throws IllegalAccessException {
+		if (node == null) {
+			return 0;
+		}
+		return getSizeHelper(node.getLeft()) + 1 + getSizeHelper(node.getRight());
 	}
 	
 	private void printTreeHelper(Node<T> node, int depth) throws IllegalAccessException {
@@ -55,14 +65,17 @@ public class BinaryTree<T> {
 		printTreeHelper(node.getLeft(), depth+1);
 	}
 	
-	private void heightHelper(Node<T> node, int curHeight) throws IllegalAccessException {
+	private int heightHelper(Node<T> node) throws IllegalAccessException {
 		if (node == null) {
-			return;
+			return 0;
 		}
-		if (this.height < curHeight) {
-			this.height = curHeight;
-		}
-		heightHelper(node.getLeft(), curHeight+1);
-		heightHelper(node.getRight(), curHeight+1);
+		int lHeigth = heightHelper(node.getLeft());
+		int rHeight = heightHelper(node.getRight());
+		
+		return 1 + max(lHeigth, rHeight);
+	}
+	
+	private int max (int a, int b) {
+		return a > b ? a : b;
 	}
 }

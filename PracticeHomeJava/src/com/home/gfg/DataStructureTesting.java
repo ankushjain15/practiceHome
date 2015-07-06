@@ -26,6 +26,7 @@ public class DataStructureTesting {
 		tree.addNode(5);
 		tree.addNode(3);
 		System.out.println("height of tree: " + tree.getHeight());
+		System.out.println("size of tree: " + tree.getSize());
 		tree.printTree();
 	}
 }
