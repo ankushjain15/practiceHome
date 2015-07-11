@@ -2,7 +2,10 @@ package com.home.gfg;
 
 import com.home.common.BST;
 import com.home.common.BinaryTree;
+import com.home.common.Heap;
 import com.home.common.LinkedList;
+import com.home.common.MaxHeap;
+import com.home.common.MinHeap;
 
 public class DataStructureTesting {
 	public static void main(String[] args) throws IllegalAccessException {
@@ -28,5 +31,16 @@ public class DataStructureTesting {
 		System.out.println("height of tree: " + tree.getHeight());
 		System.out.println("size of tree: " + tree.getSize());
 		tree.printTree();
+		
+		System.out.println("Max heap :");
+		Integer[] arr = {2,4,3,5,1,8,7,6,9};
+		Heap<Integer> maxHeap = new MaxHeap<Integer>(arr);
+		maxHeap.buildHeap();
+		maxHeap.printHeap();
+		
+		System.out.println("Min heap :");
+		Heap<Integer> minHeap = new MinHeap<Integer>(arr);
+		minHeap.buildHeap();
+		minHeap.printHeap();
 	}
 }
