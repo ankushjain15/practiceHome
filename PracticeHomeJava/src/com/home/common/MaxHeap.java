@@ -3,8 +3,8 @@ package com.home.common;
 public class MaxHeap<T extends Comparable<T>> extends Heap<T> {
 	
 	public MaxHeap() {}
-	public MaxHeap(T[] arr) {
-		super(arr);
+	public MaxHeap(T[] arr, int size) {
+		super(arr, size);
 	}
 	
 	@Override
@@ -22,7 +22,7 @@ public class MaxHeap<T extends Comparable<T>> extends Heap<T> {
 			largest = right;
 		}
 		if (largest != index) {
-			swap(heapArr, index, largest);
+			swap(index, largest);
 			heapify(largest);
 		}
 	}

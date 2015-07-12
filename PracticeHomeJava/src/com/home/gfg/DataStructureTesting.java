@@ -34,13 +34,11 @@ public class DataStructureTesting {
 		
 		System.out.println("Max heap :");
 		Integer[] arr = {2,4,3,5,1,8,7,6,9};
-		Heap<Integer> maxHeap = new MaxHeap<Integer>(arr);
-		maxHeap.buildHeap();
+		Heap<Integer> maxHeap = new MaxHeap<Integer>(arr, 9);
 		maxHeap.printHeap();
 		
 		System.out.println("Min heap :");
-		Heap<Integer> minHeap = new MinHeap<Integer>(arr);
-		minHeap.buildHeap();
+		Heap<Integer> minHeap = new MinHeap<Integer>(arr, 9);
 		minHeap.printHeap();
 	}
 }

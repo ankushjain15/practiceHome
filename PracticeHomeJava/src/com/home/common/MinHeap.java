@@ -3,13 +3,12 @@ package com.home.common;
 public class MinHeap<T extends Comparable<T>> extends Heap<T> {
 
 	public MinHeap() {}
-	public MinHeap(T[] arr) {
-		super(arr);
+	public MinHeap(T[] arr, int size) {
+		super(arr, size);
 	}
 	
 	@Override
 	public void heapify(int index) {
-		int heapSize = heapArr.length;
 		int left = getLeft(index);
 		int right = getRigth(index);
 		int smallest = 0;
@@ -22,7 +21,7 @@ public class MinHeap<T extends Comparable<T>> extends Heap<T> {
 			smallest = right;
 		}
 		if (smallest != index) {
-			swap(heapArr, index, smallest);
+			swap(index, smallest);
 			heapify(smallest);
 		}
 		

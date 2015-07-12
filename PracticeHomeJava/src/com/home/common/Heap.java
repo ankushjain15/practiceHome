@@ -2,10 +2,13 @@ package com.home.common;
 
 public abstract class Heap<T> {
 	protected T[] heapArr;
+	protected int heapSize;
 	
 	public Heap() {}
-	public Heap(T[] arr) {
+	public Heap(T[] arr, int size) {
 		this.heapArr = arr;
+		this.heapSize = size;
+		buildHeap();
 	}
 	
 	public abstract void heapify(int index);
@@ -28,14 +31,22 @@ public abstract class Heap<T> {
 		return (index-1)/2;
 	}
 	
-	public void swap(T[] heapArr, int a, int b) {
+	public void swap(int a, int b) {
 		T temp = heapArr[a];
 		heapArr[a] = heapArr[b];
 		heapArr[b] = temp;
 	}
 	
+	public T getRootElem() {
+		return heapArr[0];
+	}
+	
+	public void setRootElem(T elem) {
+		heapArr[0] = elem;
+	}
+	
 	public void printHeap() {
-		printHeapHelper(0, heapArr.length, 0);
+		printHeapHelper(0, heapSize, 0);
 	}
 	
 	public void printHeapHelper(int index, int size, int depth) {
@@ -52,6 +63,5 @@ public abstract class Heap<T> {
 		}
 		System.out.println(heapArr[index]);
 		printHeapHelper(getLeft(index), size, depth+1);
-		
 	}
 }
