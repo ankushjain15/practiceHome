@@ -2,6 +2,33 @@ package com.home.common;
 
 public class Sorting {
 	
+	public static <T extends Comparable<T>> void quickSort(T[] arr) {
+		quickSort(arr, 0, arr.length-1);
+		printArr(arr);
+	}
+	
+	private static <T extends Comparable<T>> void quickSort(T[] arr, int p, int r) {
+		int q;
+		if (p < r) {
+			q = partition(arr, p, r);
+			quickSort(arr, p, q-1);
+			quickSort(arr, q+1, r);
+		}
+	}
+	
+	private static <T extends Comparable<T>> int partition(T[] arr, int p, int r) {
+		T pivotElem = arr[r];
+		int i = p-1;
+		for (int j = p; j < r; j++) {
+			if (arr[j].compareTo(pivotElem) < 0) {
+				i++;
+				swap(arr, i, j);
+			}
+		}
+		swap(arr, i+1, r);
+		return i+1;
+	}
+	
 	public static <T extends Comparable<T>> void insertionSort(T[] arr) {
 		T key = null;
 		int j = 0;

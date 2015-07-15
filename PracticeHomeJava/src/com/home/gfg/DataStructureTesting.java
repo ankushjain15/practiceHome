@@ -47,8 +47,12 @@ public class DataStructureTesting {
 		
 		//System.out.println("bubble sort : ");
 		//Sorting.bubbleSort(arr);
-		System.out.println("inserton sort : ");
-		Sorting.insertionSort(arr);
+		
+		//System.out.println("inserton sort : ");
+		//Sorting.insertionSort(arr);
+		
+		System.out.println("quick sort : ");
+		Sorting.quickSort(arr);
 		
 	}
 }
