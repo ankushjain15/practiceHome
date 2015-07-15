@@ -6,6 +6,7 @@ import com.home.common.Heap;
 import com.home.common.LinkedList;
 import com.home.common.MaxHeap;
 import com.home.common.MinHeap;
+import com.home.common.Sorting;
 
 public class DataStructureTesting {
 	public static void main(String[] args) throws IllegalAccessException {
@@ -40,5 +41,14 @@ public class DataStructureTesting {
 		System.out.println("Min heap :");
 		Heap<Integer> minHeap = new MinHeap<Integer>(arr, 9);
 		minHeap.printHeap();
+
+		//System.out.println("Selection sort : ");
+		//Sorting.selectionSort(arr);
+		
+		//System.out.println("bubble sort : ");
+		//Sorting.bubbleSort(arr);
+		System.out.println("inserton sort : ");
+		Sorting.insertionSort(arr);
+		
 	}
 }
