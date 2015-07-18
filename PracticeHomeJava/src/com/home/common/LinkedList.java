@@ -7,6 +7,10 @@ public class LinkedList<T> {
 		this.head = null;
 	}
 	
+	public LinkedList(Node<T> head) {
+		this.head = head;
+	}
+	
 	public void addNode(T data) {
 		Node<T> temp = head;
 		if (head == null) {

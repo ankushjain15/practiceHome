@@ -2,6 +2,7 @@ package com.home.gfg;
 
 import com.home.common.BST;
 import com.home.common.BinaryTree;
+import com.home.common.DoublyLinkedList;
 import com.home.common.Heap;
 import com.home.common.LinkedList;
 import com.home.common.MaxHeap;
@@ -32,6 +33,12 @@ public class DataStructureTesting {
 		System.out.println("height of tree: " + tree.getHeight());
 		System.out.println("size of tree: " + tree.getSize());
 		tree.printTree();
+		System.out.println("mirror of the tree : ");
+		tree.mirrorTree();
+		tree.printTree();
+		System.out.println("DLL from tree : ");
+		DoublyLinkedList<Integer> dll = tree.toDll();
+		dll.printLL();
 		
 		System.out.println("Max heap :");
 		Integer[] arr = {2,4,3,5,1,8,7,6,9};

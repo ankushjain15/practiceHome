@@ -3,7 +3,7 @@ package com.home.common;
 public class BST<T extends Comparable<T>> extends BinaryTree<T> {
 
 	@Override
-	public void addNode(T data) throws IllegalAccessException {
+	public void addNode(T data) {
 		Node<T> temp = this.root;
 		if (this.root == null) {
 			this.root = new BiDirectionalNode<T>(data);

@@ -1,5 +1,7 @@
 package com.home.common;
 
+import javax.naming.OperationNotSupportedException;
+
 public class UniDirectionalNode<T> implements Node<T> {
 	protected T data;
 	protected Node<T> right;
@@ -13,8 +15,8 @@ public class UniDirectionalNode<T> implements Node<T> {
 	}
 	
 	@Override
-	public Node<T> getLeft() throws IllegalAccessException {
-		throw new IllegalAccessException("left node not defined for unidirectional node");
+	public Node<T> getLeft() {
+		throw new RuntimeException("left node not defined for unidirectional node");
 	}
 	@Override
 	public Node<T> getRight() {
@@ -28,8 +30,8 @@ public class UniDirectionalNode<T> implements Node<T> {
 	}
 
 	@Override
-	public void setLeft(Node<T> node) throws IllegalAccessException {
-		throw new IllegalAccessException("left node not defined for unidirectional node");
+	public void setLeft(Node<T> node) {
+		throw new RuntimeException("left node not defined for unidirectional node");
 		
 	}
 

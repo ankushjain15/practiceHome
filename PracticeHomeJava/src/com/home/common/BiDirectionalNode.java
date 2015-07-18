@@ -13,12 +13,12 @@ public class BiDirectionalNode<T> extends UniDirectionalNode<T> implements Node<
 	}
 	
 	@Override
-	public Node<T> getLeft() throws IllegalAccessException {
+	public Node<T> getLeft() {
 		return this.left;
 	}
 
 	@Override
-	public void setLeft(Node<T> node) throws IllegalAccessException {
+	public void setLeft(Node<T> node) {
 		this.left = node;
 	}
 	
