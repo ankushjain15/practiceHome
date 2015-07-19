@@ -32,6 +32,8 @@ public class DataStructureTesting {
 		tree.addNode(3);
 		System.out.println("height of tree: " + tree.getHeight());
 		System.out.println("size of tree: " + tree.getSize());
+		System.out.println("diameter of tree : " + tree.getDiameter());
+		System.out.println("is tree height balanced : " + tree.isHeightBalanced());
 		tree.printTree();
 		System.out.println("mirror of the tree : ");
 		tree.mirrorTree();

@@ -39,14 +39,14 @@ public class BinaryTree<T> {
 	}
 	
 	public int getSize() {
-		return getSizeHelper(this.root);
+		return sizeHelper(this.root);
 	}
 	
-	private int getSizeHelper(Node<T> node) {
+	private int sizeHelper(Node<T> node) {
 		if (node == null) {
 			return 0;
 		}
-		return getSizeHelper(node.getLeft()) + 1 + getSizeHelper(node.getRight());
+		return sizeHelper(node.getLeft()) + 1 + sizeHelper(node.getRight());
 	}
 	
 	private void printTreeHelper(Node<T> node, int depth) {
@@ -127,5 +127,64 @@ public class BinaryTree<T> {
 			temp.setRight(aList);
 		}
 		return aList;
+	}
+	
+	public int getDiameter() {
+		return diameterHelper(root, new Int());
+	}
+	
+	public int diameterHelper(Node<T> node, Int heigth) {
+		Int lh = new Int();
+		Int rh = new Int();
+		int lDia = 0, rDia = 0;
+		if(node == null) {
+			heigth.setValue(0);
+			return 0;
+		}
+		lDia = diameterHelper(node.getLeft(), lh);
+		rDia = diameterHelper(node.getRight(), rh);
+		
+		heigth.setValue(max(lh.getValue(), rh.getValue()) + 1);
+		
+		return max((lh.getValue() + rh.getValue() + 1), max(lDia, rDia));
+	}
+	
+	public boolean isHeightBalanced() {
+		return heightBalancedHelper(root, new Int());
+	}
+	
+	private boolean heightBalancedHelper(Node<T> node, Int height) {
+		Int lh = new Int();
+		Int rh = new Int();
+		boolean isLeftBal = false, isRightBal = false;
+		if(node == null) {
+			height.setValue(0);
+			return true;
+		}
+		isLeftBal = heightBalancedHelper(node.getLeft(), lh);
+		isRightBal = heightBalancedHelper(node.getRight(), rh);
+		
+		height.setValue(max(lh.getValue(), rh.getValue()) + 1);
+		if (lh.getValue()-rh.getValue() > 1 || lh.getValue()-rh.getValue() < -1) {
+			return false;
+		} else {
+			return isLeftBal && isRightBal;
+		}
+	}
+	
+	private class Int {
+		private int data;
+		public Int() {
+			this.data = 0;
+		}
+		public Int(int data) {
+			this.data = data;
+		}
+		public void setValue(int data) {
+			this.data = data;
+		}
+		public int getValue() {
+			return data;
+		}
 	}
 }
