@@ -30,6 +30,7 @@ public class DataStructureTesting {
 		tree.addNode(4);
 		tree.addNode(5);
 		tree.addNode(3);
+		System.out.println("isSumTree : " + tree.isSumTree());
 		System.out.println("Ancestors of 5 are : ");
 		tree.printAncestors(5);
 		System.out.println("height of tree: " + tree.getHeight());

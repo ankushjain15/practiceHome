@@ -192,6 +192,41 @@ public class BinaryTree<T extends Comparable<T>> {
 		
 	}
 	
+	public boolean isSumTree() {
+		return isSumTreeHelper(root);
+	}
+	
+	private boolean isSumTreeHelper(Node<T> node) {
+		if (node == null || isLeafNode(node)) {
+			return true;
+		}
+		if (isSumTreeHelper(node.getLeft()) && isSumTreeHelper(node.getRight())) {
+			Integer ls = 0, rs = 0;
+			if (node.getLeft() == null) {
+				ls = 0;
+			} else if (isLeafNode(node.getLeft())) {
+				ls = (Integer)node.getLeft().getData();
+			} else {
+				ls = 2*(Integer)node.getLeft().getData();
+			}
+			
+			if (node.getRight() == null) {
+				rs = 0;
+			} else if (isLeafNode(node.getRight())) {
+				rs = (Integer)node.getRight().getData();
+			} else {
+				rs = 2*(Integer)node.getRight().getData();
+			}
+			Integer sumLR = ls + rs;
+			return sumLR.compareTo((Integer)node.getData()) == 0;
+		}
+		return false;
+	}
+	
+	private boolean isLeafNode(Node<T> node) {
+		return (node.getLeft() == null && node.getRight() ==  null);
+	}
+	
 	private class Int {
 		private int data;
 		public Int() {
