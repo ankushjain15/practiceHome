@@ -30,6 +30,8 @@ public class DataStructureTesting {
 		tree.addNode(4);
 		tree.addNode(5);
 		tree.addNode(3);
+		System.out.println("Ancestors of 5 are : ");
+		tree.printAncestors(5);
 		System.out.println("height of tree: " + tree.getHeight());
 		System.out.println("size of tree: " + tree.getSize());
 		System.out.println("diameter of tree : " + tree.getDiameter());

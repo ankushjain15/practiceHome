@@ -1,6 +1,5 @@
 package com.home.common;
 
-import javax.naming.OperationNotSupportedException;
 
 public class UniDirectionalNode<T> implements Node<T> {
 	protected T data;

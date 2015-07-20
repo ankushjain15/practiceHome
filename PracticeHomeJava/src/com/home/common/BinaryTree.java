@@ -1,6 +1,6 @@
 package com.home.common;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable<T>> {
 	protected BiDirectionalNode<T> root;
 	protected int height;
 	
@@ -170,6 +170,26 @@ public class BinaryTree<T> {
 		} else {
 			return isLeftBal && isRightBal;
 		}
+	}
+	
+	public void printAncestors(T key) {
+		printAncestorsHelper(root, key);
+		System.out.println();
+	}
+	
+	private boolean printAncestorsHelper(Node<T> node, T key) {
+		if(node == null) {
+			return false;
+		}
+		if(((Comparable)node.getData()).compareTo(key) == 0) {
+			return true;
+		}
+		if (printAncestorsHelper(node.getLeft(), key) || printAncestorsHelper(node.getRight(), key)) {
+			System.out.print(node.getData() + " ");
+			return true;
+		}
+		return false;
+		
 	}
 	
 	private class Int {
