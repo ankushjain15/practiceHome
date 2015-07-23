@@ -12,5 +12,13 @@ public class GFGCaller {
 		
 		int[] arrMaxSumNoElemAdj = {5,-5,-10,-40,50,35};
 		ArrMaxSumNoTwoElemAdjacent.findMaxSumNoTwoElemAdjacent(arrMaxSumNoElemAdj);
+		
+		ArrMaxDiffLarElemAfterSmallElem.getMaxDiffLargeElemAfterSmallElem(arrMaxSumNoElemAdj);
+		
+		Integer[] arrSort012 = new Integer[]{1,0,2,1,1,0,2,1,2,0,1,1};
+		ArrSort012.sortArrOf012(arrSort012);
+		
+		int[] arrEquilibriumInd = {2,4,4,6,8,1,1};
+		ArrEquilibriumIndex.printEquilibriumIndex(arrEquilibriumInd);
 	}
 }

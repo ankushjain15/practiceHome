@@ -72,13 +72,13 @@ public class Sorting {
 		printArr(arr);
 	}
 	
-	private static <T> void swap(T[] arr, int i, int j) {
+	public static <T> void swap(T[] arr, int i, int j) {
 		T temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
 	
-	private static <T> void printArr(T[] arr) {
+	public static <T> void printArr(T[] arr) {
 		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
