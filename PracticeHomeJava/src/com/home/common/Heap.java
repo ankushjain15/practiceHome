@@ -3,6 +3,7 @@ package com.home.common;
 public abstract class Heap<T> {
 	protected T[] heapArr;
 	protected int heapSize;
+	public static int MAX_HEAP_SIZE = 128;
 	
 	public Heap() {}
 	public Heap(T[] arr, int size) {
@@ -11,7 +12,13 @@ public abstract class Heap<T> {
 		buildHeap();
 	}
 	
+	public Heap(T[] arr) {
+		this.heapArr = arr;
+		this.heapSize = 0;
+	}
+	
 	public abstract void heapify(int index);
+	public abstract void heapifyTowardsRoot(int index);
 	
 	public void buildHeap() {
 		for (int i = (heapArr.length-2)/2; i >=0; --i) {
@@ -19,8 +26,33 @@ public abstract class Heap<T> {
 		}
 	}
 	
+	public boolean insert(T elem) {
+		if (heapSize < MAX_HEAP_SIZE) {
+			heapSize++;
+			heapArr[heapSize-1] = elem;
+			heapifyTowardsRoot(heapSize-1);
+			return true;
+		}
+		return false;
+	}
+	
+	public T extractTop() {
+		if(heapSize > 0) {
+			T top = heapArr[0];
+			heapArr[0] = heapArr[heapSize-1];
+			heapSize--;
+			heapify(0);
+			return top;
+		}
+		return null;
+	}
+	
 	public int getLeft(int index) {
 		return (2*index + 1);
+	}
+	
+	public int getCount() {
+		return heapSize;
 	}
 	
 	public int getRigth(int index) {

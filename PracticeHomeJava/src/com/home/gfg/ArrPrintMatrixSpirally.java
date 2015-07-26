@@ -4,6 +4,7 @@ public class ArrPrintMatrixSpirally {
 
 	public static void printMatrixSpirally(int[][] mat,int m, int n) {
 		int k=0,l=0;
+		System.out.println("spirally matrix printing :");
 		while (k < m && l < n) {
 			for (int i = k; i < n; i++) {
 				System.out.print(mat[k][i] + " ");

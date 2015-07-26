@@ -23,5 +23,8 @@ public class GFGCaller {
 		
 		int[][] arrPrintMatSpirally = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 		ArrPrintMatrixSpirally.printMatrixSpirally(arrPrintMatSpirally, 3, 4);
+		
+		Integer[] arrMedianOnline = {3,4,5,1,2,8,9,6,7,5};
+		ArrMedianOnlineAlgo.printMedianOnline(arrMedianOnline);
 	}
 }
