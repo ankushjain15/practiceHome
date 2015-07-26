@@ -20,5 +20,8 @@ public class GFGCaller {
 		
 		int[] arrEquilibriumInd = {2,4,4,6,8,1,1};
 		ArrEquilibriumIndex.printEquilibriumIndex(arrEquilibriumInd);
+		
+		int[][] arrPrintMatSpirally = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+		ArrPrintMatrixSpirally.printMatrixSpirally(arrPrintMatSpirally, 3, 4);
 	}
 }
