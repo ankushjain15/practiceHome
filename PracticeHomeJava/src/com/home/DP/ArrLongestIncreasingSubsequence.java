@@ -1,4 +1,4 @@
-package com.home.gfg;
+package com.home.DP;
 
 public class ArrLongestIncreasingSubsequence {
 	public static void printLISLength(Integer[] arr) {

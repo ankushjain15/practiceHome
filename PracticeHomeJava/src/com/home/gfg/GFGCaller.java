@@ -1,5 +1,8 @@
 package com.home.gfg;
 
+import com.home.DP.ArrLongestIncreasingSubsequence;
+import com.home.DP.ArrMaxSumIncreasingSubsequence;
+
 public class GFGCaller {
 
 	public static void main(String[] args) {
@@ -29,5 +32,9 @@ public class GFGCaller {
 		
 		ArrLongestIncreasingSubsequence.printLISLength(arrMedianOnline);
 		ArrMaxSumIncreasingSubsequence.printMaxSumIncreasingSubsequence(arrMedianOnline);
+		
+		int[] arrLarSubarrayEqual0s1s = {0,1,1,1,0,0,1,1,0,1,0,1,1,1,0};
+		ArrLargestSubarrayHavingEqual0s1s.printLargestSubarrayHavingEqual0s1s(arrLarSubarrayEqual0s1s);
+		
 	}
 }

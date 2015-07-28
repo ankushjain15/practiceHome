@@ -1,4 +1,4 @@
-package com.home.gfg;
+package com.home.DP;
 
 public class ArrMaxSumIncreasingSubsequence {
 
