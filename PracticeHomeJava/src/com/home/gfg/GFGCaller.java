@@ -2,6 +2,7 @@ package com.home.gfg;
 
 import com.home.DP.ArrLongestIncreasingSubsequence;
 import com.home.DP.ArrMaxSumIncreasingSubsequence;
+import com.home.gfg.string.AllPermutations;
 
 public class GFGCaller {
 
@@ -36,5 +37,7 @@ public class GFGCaller {
 		int[] arrLarSubarrayEqual0s1s = {0,1,1,1,0,0,1,1,0,1,0,1,1,1,0};
 		ArrLargestSubarrayHavingEqual0s1s.printLargestSubarrayHavingEqual0s1s(arrLarSubarrayEqual0s1s);
 		
+		Character[] arrChars = {'a','n','k'};
+		AllPermutations.printAllPermutations(arrChars);
 	}
 }
