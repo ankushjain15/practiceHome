@@ -5,9 +5,9 @@ import com.home.common.Sorting;
 public class ReverseWords {
 	public static void reverseWords(char[] str) {
 		int i = 0, j=0;
-		while(str[i] != 0) {
-			j = i;
-			while(str[j] != 32) {
+		while(j < str.length) {
+			i = j;
+			while(j < str.length && str[j] != 32) {
 				j++;
 			}
 			reverse(str, i, j-1);
