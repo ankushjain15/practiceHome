@@ -1,4 +1,4 @@
-package com.home.DP;
+package com.home.dp;
 
 //minimum cuts required such that each partition is a palindrome.
 public class StrPalindromePartitioning {

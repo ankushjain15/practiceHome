@@ -1,4 +1,4 @@
-package com.home.DP;
+package com.home.dp;
 
 public class ArrMaxSumIncreasingSubsequence {
 

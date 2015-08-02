@@ -1,12 +1,15 @@
 package com.home.gfg;
 
-import com.home.DP.ArrLongestIncreasingSubsequence;
-import com.home.DP.ArrMaxSumIncreasingSubsequence;
-import com.home.DP.LongestPalindromicSubstr;
-import com.home.DP.StrPalindromePartitioning;
+import com.home.common.Trie;
+import com.home.dp.ArrLongestIncreasingSubsequence;
+import com.home.dp.ArrMaxSumIncreasingSubsequence;
+import com.home.dp.LongestCommonSubsequence;
+import com.home.dp.LongestPalindromicSubstr;
+import com.home.dp.StrPalindromePartitioning;
 import com.home.gfg.string.AllPermutations;
 import com.home.gfg.string.LexicographicRank;
 import com.home.gfg.string.LongestSubStrHavingNonRepeatingChar;
+import com.home.gfg.string.RemovebAndac;
 import com.home.gfg.string.ReverseWords;
 
 public class GFGCaller {
@@ -61,6 +64,20 @@ public class GFGCaller {
 		
 		String strLongestPal = "forgeeksskeegfor";
 		LongestPalindromicSubstr.printLongestPalindromicSubstr(strLongestPal.toCharArray());
+		
+		String strRemovebAndac = "abcnkuacjainc";
+		RemovebAndac.removebAndacFromStrinInplace(strRemovebAndac.toCharArray());
+		
+		String lcsStr1 = "aggtab";
+		String lcsStr2 = "gxtxayb";
+		LongestCommonSubsequence.LCS(lcsStr1.toCharArray(), lcsStr2.toCharArray());
+		
+		Trie trie = new Trie();
+		trie.insert("ankush");
+		trie.insert("abhishek");
+		trie.printTrie();
+		System.out.println("\nsearch Trie for anush : " + trie.search("anush"));
+		
 		
 	}
 }

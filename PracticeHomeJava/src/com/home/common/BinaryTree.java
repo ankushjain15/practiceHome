@@ -72,7 +72,7 @@ public class BinaryTree<T extends Comparable<T>> {
 		int lHeigth = heightHelper(node.getLeft());
 		int rHeight = heightHelper(node.getRight());
 		
-		return 1 + max(lHeigth, rHeight);
+		return 1 + CommonUtils.max(lHeigth, rHeight);
 	}
 	
 	public void mirrorTree() {
@@ -88,10 +88,6 @@ public class BinaryTree<T extends Comparable<T>> {
 		node.setRight(temp);
 		mirrorTreeHelper(node.getLeft());
 		mirrorTreeHelper(node.getRight());
-	}
-	
-	private int max(int a, int b) {
-		return a > b ? a : b;
 	}
 	
 	public DoublyLinkedList<T> toDll() {
@@ -144,9 +140,9 @@ public class BinaryTree<T extends Comparable<T>> {
 		lDia = diameterHelper(node.getLeft(), lh);
 		rDia = diameterHelper(node.getRight(), rh);
 		
-		heigth.setValue(max(lh.getValue(), rh.getValue()) + 1);
+		heigth.setValue(CommonUtils.max(lh.getValue(), rh.getValue()) + 1);
 		
-		return max((lh.getValue() + rh.getValue() + 1), max(lDia, rDia));
+		return CommonUtils.max((lh.getValue() + rh.getValue() + 1), CommonUtils.max(lDia, rDia));
 	}
 	
 	public boolean isHeightBalanced() {
@@ -164,7 +160,7 @@ public class BinaryTree<T extends Comparable<T>> {
 		isLeftBal = heightBalancedHelper(node.getLeft(), lh);
 		isRightBal = heightBalancedHelper(node.getRight(), rh);
 		
-		height.setValue(max(lh.getValue(), rh.getValue()) + 1);
+		height.setValue(CommonUtils.max(lh.getValue(), rh.getValue()) + 1);
 		if (lh.getValue()-rh.getValue() > 1 || lh.getValue()-rh.getValue() < -1) {
 			return false;
 		} else {
