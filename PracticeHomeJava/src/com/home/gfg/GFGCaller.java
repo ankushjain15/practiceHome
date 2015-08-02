@@ -2,7 +2,11 @@ package com.home.gfg;
 
 import com.home.DP.ArrLongestIncreasingSubsequence;
 import com.home.DP.ArrMaxSumIncreasingSubsequence;
+import com.home.DP.LongestPalindromicSubstr;
+import com.home.DP.StrPalindromePartitioning;
 import com.home.gfg.string.AllPermutations;
+import com.home.gfg.string.LexicographicRank;
+import com.home.gfg.string.LongestSubStrHavingNonRepeatingChar;
 import com.home.gfg.string.ReverseWords;
 
 public class GFGCaller {
@@ -38,10 +42,25 @@ public class GFGCaller {
 		int[] arrLarSubarrayEqual0s1s = {0,1,1,1,0,0,1,1,0,1,0,1,1,1,0};
 		ArrLargestSubarrayHavingEqual0s1s.printLargestSubarrayHavingEqual0s1s(arrLarSubarrayEqual0s1s);
 		
-		Character[] arrCharsAllPermutations = {'a','n','k'};
+		Character[] arrCharsAllPermutations = {'a','b','c'};
 		AllPermutations.printAllPermutations(arrCharsAllPermutations);
+		AllPermutations.printAllPermutationWithRepetition(arrCharsAllPermutations);
 		
 		String arrReverseWords = "hello, how are you?";
 		ReverseWords.reverseWords(arrReverseWords.toCharArray());
+		
+		String strLenSubArrHavingNonRepeatingChar = "geeksforgeeks";
+		LongestSubStrHavingNonRepeatingChar.printLenLongstSubStrHavingNonRepeatingChar
+		(strLenSubArrHavingNonRepeatingChar.toCharArray());
+		
+		String strPalPartition = "ababbbabbababa";
+		StrPalindromePartitioning.printMinCutsToPartitionNSquare(strPalPartition.toCharArray());
+		
+		String strRank = "string";
+		LexicographicRank.printLexicographicRank(strRank.toCharArray());
+		
+		String strLongestPal = "forgeeksskeegfor";
+		LongestPalindromicSubstr.printLongestPalindromicSubstr(strLongestPal.toCharArray());
+		
 	}
 }
