@@ -2,7 +2,7 @@ package com.home.common;
 
 public class TrieNode {
 	protected TrieNode[] children = new TrieNode[256];
-	boolean isEnd;
+	private boolean isEnd;
 	
 	public TrieNode() {
 		this.isEnd = false;
@@ -12,6 +12,9 @@ public class TrieNode {
 	}
 	public void markEnd() {
 		this.isEnd = true;
+	}
+	public void unMarkEnd() {
+		this.isEnd = false;
 	}
 	
 }

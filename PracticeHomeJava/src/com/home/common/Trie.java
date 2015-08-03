@@ -40,7 +40,42 @@ public class Trie {
 				return false;
 			}
 		}
-		return (pCrawl != null && pCrawl.isEnd);
+		return (pCrawl != null && pCrawl.isLeaf());
+	}
+	
+	public void delete(String key) {
+		char[] keyStr = key.toCharArray();
+		int len = keyStr.length;
+		deleteHelper(this.root, 0, len, keyStr);
+	}
+	
+	private boolean deleteHelper(TrieNode node, int depth, int len, char[] keyStr) {
+		if(node != null) {
+			if(depth == len) {
+				if(node.isLeaf()) {
+					node.unMarkEnd();
+					if(isFree(node)) {
+						return true;
+					}
+				}
+				return false;
+			} else {
+				if(deleteHelper(node.children[keyStr[depth]], depth+1, len, keyStr)) {
+					node.children[keyStr[depth]] = null;
+					return (!node.isLeaf() && isFree(node));
+				}
+			}
+		}
+		return false;
+	}
+	
+	private boolean isFree(TrieNode node) {
+		for (int i = 0; i < 256; i++) {
+			if(node.children[i] != null) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	public void printTrie() {
@@ -52,7 +87,7 @@ public class Trie {
 		if(node == null) {
 			return;
 		}
-		if(node.isEnd) {
+		if(node.isLeaf()) {
 			for (int i = 0; i < depth; i++) {
 				System.out.print(str[i]);
 			}
