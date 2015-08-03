@@ -7,6 +7,9 @@ public class BinaryTree<T extends Comparable<T>> {
 	public BinaryTree() {
 		this.root = null;
 	}
+	public BinaryTree(BiDirectionalNode<T> node) {
+		this.root = node;
+	}
 	
 	public void addNode(T data) {
 		boolean goLeft;
@@ -237,5 +240,21 @@ public class BinaryTree<T extends Comparable<T>> {
 		public int getValue() {
 			return data;
 		}
+	}
+	
+	public void makeBstFromSortedArr(T[] arr) {
+		int len = arr.length;
+		this.root = (BiDirectionalNode<T>)makeBstHelper(arr, 0, len-1);
+	}
+	
+	private Node<T> makeBstHelper(T[] arr, int start, int end) {
+		if(start > end) {
+			return null;
+		}
+		int mid = (end + start)/2;
+		Node<T> node = new BiDirectionalNode<T>(arr[mid]);
+		node.setLeft(makeBstHelper(arr, start, mid-1));
+		node.setRight(makeBstHelper(arr, mid+1, end));
+		return node;
 	}
 }

@@ -66,5 +66,10 @@ public class DataStructureTesting {
 		System.out.println("quick sort : ");
 		Sorting.quickSort(arr);
 		
+		Integer[] arrToBst = {1,2,3,4,5,6,7,8,9};
+		BST<Integer> bst = new BST<Integer>();
+		bst.makeBstFromSortedArr(arrToBst);
+		bst.printTree();
+		
 	}
 }

@@ -76,6 +76,8 @@ public class GFGCaller {
 		trie.insert("ankush");
 		trie.insert("abhishek");
 		trie.printTrie();
+		trie.delete("ankush");
+		trie.printTrie();
 		System.out.println("\nsearch Trie for anush : " + trie.search("anush"));
 		
 		
