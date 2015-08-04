@@ -21,6 +21,14 @@ public class DataStructureTesting {
 		list.reverse();
 		list.printLL();
 		
+		LinkedList<Character> strList = new LinkedList<Character>();
+		strList.addNode('i');
+		strList.addNode('c');
+		strList.addNode('i');
+		strList.addNode('c');
+		strList.addNode('i');
+		System.out.println("Is the linked list a palindrome : " + strList.isPalindrome());
+		
 //		BinaryTree<Integer> tree = new BinaryTree<Integer>();
 		BST<Integer> tree = new BST<Integer>();
 		tree.addNode(2);

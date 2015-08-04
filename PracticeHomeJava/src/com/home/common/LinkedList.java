@@ -3,6 +3,8 @@ package com.home.common;
 public class LinkedList<T> {
 	protected Node<T> head;
 	
+	protected Node<T> holder;
+	
 	public LinkedList() {
 		this.head = null;
 	}
@@ -56,6 +58,25 @@ public class LinkedList<T> {
 			temp = temp.getRight();
 		}
 		System.out.println("");
+	}
+	
+	public boolean isPalindrome() {
+		this.holder = this.head;
+		return isPalindromeHelper(this.head);
+	}
+	
+	private boolean isPalindromeHelper(Node<T> node) {
+		if(node == null) {
+			return true;
+		}
+		boolean isp = isPalindromeHelper(node.getRight());
+		if(!isp) {
+			return false;
+		}
+		boolean isp1 = node.getData().equals(this.holder.getData());
+		this.holder = this.holder.getRight();
+		return isp1;
+		
 	}
 }
 
