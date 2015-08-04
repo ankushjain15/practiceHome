@@ -78,5 +78,25 @@ public class LinkedList<T> {
 		return isp1;
 		
 	}
+	
+	public void pairWiseSwap() {
+		if(this.head == null || this.head.getRight() == null) {
+			return;
+		}
+		Node<T> prev = this.head;
+		Node<T> curr = this.head.getRight();
+		this.head = curr;
+		while(true) {
+			Node<T> next = curr.getRight();
+			curr.setRight(prev);
+			if(next == null || next.getRight() == null) {
+				prev.setRight(next);
+				break;
+			}
+			prev.setRight(next.getRight());
+			prev = next;
+			curr = prev.getRight();
+		}
+	}
 }
 

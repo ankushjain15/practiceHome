@@ -28,6 +28,9 @@ public class DataStructureTesting {
 		strList.addNode('c');
 		strList.addNode('i');
 		System.out.println("Is the linked list a palindrome : " + strList.isPalindrome());
+		strList.pairWiseSwap();
+		System.out.println("linked list after pairwise swap :");
+		strList.printLL();
 		
 //		BinaryTree<Integer> tree = new BinaryTree<Integer>();
 		BST<Integer> tree = new BST<Integer>();
