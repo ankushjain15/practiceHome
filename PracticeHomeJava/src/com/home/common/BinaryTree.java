@@ -191,6 +191,44 @@ public class BinaryTree<T extends Comparable<T>> {
 		
 	}
 	
+	public Node<T> findLowestCommonAncestor(T a, T b) {
+		BoolContainer b1 = new BoolContainer();
+		BoolContainer b2 = new BoolContainer();
+		Node<T> lca = lcaHelper(this.root, a, b, b1, b2);
+		if((b1.getFlag() && b2.getFlag()) || (b1.getFlag() && find(lca, b)) || (b2.getFlag() && find(lca, a))) {
+			return lca;
+		}
+		return null;
+	}
+	
+	private boolean find(Node<T> node, T key) {
+		if(node == null) {
+			return false;
+		}
+		return node.getData().equals(key) || find(node.getLeft(), key) || find(node.getRight(), key);
+	}
+	
+	private Node<T> lcaHelper(Node<T> node, T a, T b, BoolContainer b1, BoolContainer b2) {
+		if(node == null) {
+			return null;
+		}
+		if(node.getData().equals(a)) {
+			b1.setFlag(true);
+			return node;
+		}
+		if(node.getData().equals(b)) {
+			b2.setFlag(true);
+			return node;
+		}
+		Node<T> left = lcaHelper(node.getLeft(), a, b, b1, b2);
+		Node<T> right = lcaHelper(node.getRight(), a, b, b1, b2);
+		if(left != null && right != null) {
+			return node;
+		}
+		return (left != null) ? left : right;
+		
+	}
+	
 	public boolean isSumTree() {
 		return isSumTreeHelper(root);
 	}
@@ -239,6 +277,19 @@ public class BinaryTree<T extends Comparable<T>> {
 		}
 		public int getValue() {
 			return data;
+		}
+	}
+	
+	private class BoolContainer {
+		private boolean flag;
+		public BoolContainer() {
+			this.flag = flag;
+		}
+		public void setFlag(boolean flag) {
+			this.flag = flag;
+		}
+		public boolean getFlag() {
+			return this.flag;
 		}
 	}
 	

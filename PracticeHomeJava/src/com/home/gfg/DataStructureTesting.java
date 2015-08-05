@@ -49,6 +49,8 @@ public class DataStructureTesting {
 		System.out.println("diameter of tree : " + tree.getDiameter());
 		System.out.println("is tree height balanced : " + tree.isHeightBalanced());
 		tree.printTree();
+		System.out.println("LCA of 3 and 9 is : " + tree.findLowestCommonAncestor(3, 9).getData());
+		
 		System.out.println("mirror of the tree : ");
 		tree.mirrorTree();
 		tree.printTree();
