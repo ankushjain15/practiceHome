@@ -6,11 +6,7 @@ import com.home.dp.ArrMaxSumIncreasingSubsequence;
 import com.home.dp.LongestCommonSubsequence;
 import com.home.dp.LongestPalindromicSubstr;
 import com.home.dp.StrPalindromePartitioning;
-import com.home.gfg.string.AllPermutations;
-import com.home.gfg.string.LexicographicRank;
-import com.home.gfg.string.LongestSubStrHavingNonRepeatingChar;
-import com.home.gfg.string.RemovebAndac;
-import com.home.gfg.string.ReverseWords;
+import com.home.gfg.string.*;
 
 public class GFGCaller {
 
