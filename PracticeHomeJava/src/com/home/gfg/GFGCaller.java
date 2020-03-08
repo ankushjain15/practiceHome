@@ -82,6 +82,8 @@ public class GFGCaller {
 		trie.printTrie();
 		System.out.println("\nsearch Trie for anush : " + trie.search("anush"));
 		
+		String myName = "ankushjain";
+		System.out.println("\n ZigZag form is read as : " + StringWhenConvertedZigZagVertically.convertZigZagVertically(myName, 3));
 		
 	}
 }
